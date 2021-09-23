@@ -1,19 +1,21 @@
-require "bike"
+
 
 class DockingStation
-    attr_reader :bikes  
+    attr_reader :bikes
+    attr_reader :capacity
     DEFAULT_CAPACITY = 20
     
     # def capacity 
     #   DEFAULT_CAPACITY
     # end
 
-    def initialize
+    def initialize(capacity = DEFAULT_CAPACITY)
+      @capacity = capacity
       @bikes = []
     end
 
     def release_bike
-      if self.empty? == true  
+      if self.empty?  
         raise "There are no bikes"
       else 
         Bike.new 
