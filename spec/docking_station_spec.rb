@@ -61,5 +61,4 @@ describe DockingStation do
         docking_station.dock(bike, working)
         expect(docking_station.broken_bikes.length).to eq(1)
     end
-
   end
