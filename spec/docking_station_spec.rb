@@ -40,7 +40,7 @@ describe DockingStation do
         working = bike.working?
         capacity = DockingStation::DEFAULT_CAPACITY
         capacity.times { docking_station.dock(bike, working) }
-        expect{ docking_station.dock(bike, working) }.to raise_error
+        expect{ docking_station.dock(bike, working) }.to raise_error("This docking station is full")
         # to be able to push
     end
 

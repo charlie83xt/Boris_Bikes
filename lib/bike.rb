@@ -6,4 +6,7 @@ class Bike
     def working?
       working
     end
+    def change_status
+      @working ? @working = false : @working = true
+    end
 end 
